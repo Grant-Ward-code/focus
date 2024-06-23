@@ -14,6 +14,9 @@
 		2BA73BD92C2690D0008FA5BE /* focusTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA73BD82C2690D0008FA5BE /* focusTests.swift */; };
 		2BA73BE32C2690D0008FA5BE /* focusUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA73BE22C2690D0008FA5BE /* focusUITests.swift */; };
 		2BA73BE52C2690D0008FA5BE /* focusUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA73BE42C2690D0008FA5BE /* focusUITestsLaunchTests.swift */; };
+		2BA73BF32C269610008FA5BE /* StreamChatSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2BA73BF22C269610008FA5BE /* StreamChatSwiftUI */; };
+		2BA73BF52C2696A1008FA5BE /* CustomChannelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA73BF42C2696A1008FA5BE /* CustomChannelList.swift */; };
+		2BA73BF72C2696C5008FA5BE /* CustomChannelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA73BF62C2696C5008FA5BE /* CustomChannelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,8 @@
 		2BA73BDE2C2690D0008FA5BE /* focusUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = focusUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BA73BE22C2690D0008FA5BE /* focusUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = focusUITests.swift; sourceTree = "<group>"; };
 		2BA73BE42C2690D0008FA5BE /* focusUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = focusUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2BA73BF42C2696A1008FA5BE /* CustomChannelList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChannelList.swift; sourceTree = "<group>"; };
+		2BA73BF62C2696C5008FA5BE /* CustomChannelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomChannelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BA73BF32C269610008FA5BE /* StreamChatSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,6 +101,8 @@
 			isa = PBXGroup;
 			children = (
 				2BA73BC72C2690CB008FA5BE /* focusApp.swift */,
+				2BA73BF42C2696A1008FA5BE /* CustomChannelList.swift */,
+				2BA73BF62C2696C5008FA5BE /* CustomChannelView.swift */,
 				2BA73BC92C2690CB008FA5BE /* ContentView.swift */,
 				2BA73BCB2C2690CF008FA5BE /* Assets.xcassets */,
 				2BA73BCD2C2690CF008FA5BE /* Preview Content */,
@@ -143,6 +151,9 @@
 			dependencies = (
 			);
 			name = focus;
+			packageProductDependencies = (
+				2BA73BF22C269610008FA5BE /* StreamChatSwiftUI */,
+			);
 			productName = focus;
 			productReference = 2BA73BC42C2690CB008FA5BE /* focus.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +226,9 @@
 				Base,
 			);
 			mainGroup = 2BA73BBB2C2690CB008FA5BE;
+			packageReferences = (
+				2BA73BF12C26960F008FA5BE /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */,
+			);
 			productRefGroup = 2BA73BC52C2690CB008FA5BE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,6 +272,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BA73BCA2C2690CB008FA5BE /* ContentView.swift in Sources */,
+				2BA73BF72C2696C5008FA5BE /* CustomChannelView.swift in Sources */,
+				2BA73BF52C2696A1008FA5BE /* CustomChannelList.swift in Sources */,
 				2BA73BC82C2690CB008FA5BE /* focusApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -588,6 +604,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2BA73BF12C26960F008FA5BE /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getstream/stream-chat-swiftui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.44.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2BA73BF22C269610008FA5BE /* StreamChatSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2BA73BF12C26960F008FA5BE /* XCRemoteSwiftPackageReference "stream-chat-swiftui" */;
+			productName = StreamChatSwiftUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2BA73BBC2C2690CB008FA5BE /* Project object */;
 }
